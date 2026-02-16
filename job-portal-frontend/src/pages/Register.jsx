@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { register } from '../services/authService';
+import { register } from '../features/auth/authService';
 
 const Register = () => {
     const [form, setForm] = useState({ name: '', email: '', password: '' });

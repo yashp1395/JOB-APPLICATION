@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 import JobCard from '../components/JobCard';
-import { fetchJobs } from '../services/jobService';
-import { setJobs } from '../store/jobSlice';
+import { fetchJobs } from '../features/jobs/jobService';
+import { setJobs } from '../features/jobs/jobSlice';
 
 const Jobs = () => {
     const dispatch = useDispatch();
-    const jobs = useSelector((state) => state.jobs.list);
+    const jobs = useSelector((state) => state.jobs.jobs);
 
     useEffect(() => {
         const getJobs = async () => {

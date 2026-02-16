@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
-import { fetchReferrals } from '../api/referrals';
+import { fetchReferrals } from '../features/referrals/referralService';
 import { setReferrals } from '../store/referralsSlice';
 
 const Referrals = () => {
     const dispatch = useDispatch();
-    const referrals = useSelector(state => state.referrals.list);
+    const referrals = useSelector(state => state.referrals.referrals);
 
     useEffect(() => {
         const getReferrals = async () => {

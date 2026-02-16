@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 
 const Dashboard = () => {
-    const user = useSelector((state) => state.user);
+    const user = useSelector((state) => state.auth.user);
 
     return (
         <>
